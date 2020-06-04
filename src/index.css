@@ -1,0 +1,138 @@
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("./fonts/helveticaneue/HelveticaNeue Thin.ttf");
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: HelveticaNeue;
+}
+
+.App {
+  background: linear-gradient(1deg, #074ceb, #13e9e7);
+  background-size: 400% 400%;
+  -webkit-animation: coolRoll 21s ease infinite;
+  -moz-animation: coolRoll 21s ease infinite;
+  -o-animation: coolRoll 21s ease infinite;
+  animation: coolRoll 21s ease infinite;
+}
+
+@-webkit-keyframes coolRoll {
+  0%{background-position:0% 7%}
+  50%{background-position:100% 94%}
+  100%{background-position:0% 7%}
+}
+@-moz-keyframes coolRoll {
+  0%{background-position:0% 7%}
+  50%{background-position:100% 94%}
+  100%{background-position:0% 7%}
+}
+@-o-keyframes coolRoll {
+  0%{background-position:0% 7%}
+  50%{background-position:100% 94%}
+  100%{background-position:0% 7%}
+}
+@keyframes coolRoll {
+  0%{background-position:0% 7%}
+  50%{background-position:100% 94%}
+  100%{background-position:0% 7%}
+}
+
+.App-warm {
+  background: linear-gradient(1deg, #eb0707, #e98b13);
+  background-size: 400% 400%;
+  -webkit-animation: warmRoll 21s ease infinite;
+  -moz-animation: warmRoll 21s ease infinite;
+  -o-animation: warmRoll 21s ease infinite;
+  animation: warmRoll 21s ease infinite;
+}
+
+@-webkit-keyframes warmRoll {
+  0%{background-position:0% 7%}
+  50%{background-position:100% 94%}
+  100%{background-position:0% 7%}
+}
+@-moz-keyframes warmRoll {
+  0%{background-position:0% 7%}
+  50%{background-position:100% 94%}
+  100%{background-position:0% 7%}
+}
+@-o-keyframes warmRoll {
+  0%{background-position:0% 7%}
+  50%{background-position:100% 94%}
+  100%{background-position:0% 7%}
+}
+@keyframes warmRoll {
+  0%{background-position:0% 7%}
+  50%{background-position:100% 94%}
+  100%{background-position:0% 7%}
+}
+
+main {
+  min-height: 100vh;
+  padding: 25px;
+}
+
+.search-box {
+  width: 100%;
+  margin: 0 0 75px;
+}
+
+.search-box .search-bar {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+  background-color: rgba(240, 240, 240, 0.7);
+  border-radius: 16px 16px 16px 16px;
+  margin-top: -15px;
+  box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+  text-align: center;
+  transition: 0.4s ease;
+}
+
+.search-box .search-bar:hover {
+  background-color: white;
+}
+
+.location-box .location {
+  color: white;
+  font-size: 50px;
+  text-align: center;
+}
+
+.location-box .date {
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.weather-box {
+  text-align: center;
+}
+
+.weather-box .temp {
+  position: relative;
+  display: inline-block;
+  box-shadow: 3px 4px rgba(0, 0, 0, 0.2);
+  margin: 30px auto;
+  margin-top: 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 15px 25px;
+  color: white;
+  font-size: 120px;
+  text-align: center;
+}
+
+.weather-box .weather {
+  color: white;
+  font-size: 42px;
+}
