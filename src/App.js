@@ -9,7 +9,6 @@ const api = {
 function App() {
   const [query, setQuery] = React.useState('');
   const [weather, setWeather] = React.useState({});
-  const [units, setUnits] = React.useState(true);
 
   const search = event => {
     if(event.key === "Enter") {
@@ -67,10 +66,6 @@ function App() {
     else
       return "App-warm";
   };
-
-  const chooseUnits = units => {
-    console.log(units.target.value);
-    setUnits(!units)};
 
   return (
     <div className={chooseBack(weather)}>
