@@ -6,11 +6,10 @@ const api = {
 }
 
 
-
-
 function App() {
   const [query, setQuery] = React.useState('');
   const [weather, setWeather] = React.useState({});
+  const [units, setUnits] = React.useState(true);
 
   const search = event => {
     if(event.key === "Enter") {
@@ -47,15 +46,17 @@ function App() {
   ]
 
   const days = [
+    "Sunday",
     "Monday",
     "Tuesday",
     "Wednesday",
     "Thursday",
-    "Friday"
+    "Friday", 
+    "Saturday",
   ]
 
   const todayIs = `${days[dateInfo.dayOfWeek]}, ${months[dateInfo.month]} ${dateInfo.day}`;
-
+  
   const chooseBack = weather => {
     if(typeof weather.name != "undefined") {
       if(weather.main.temp > 55)
@@ -66,6 +67,10 @@ function App() {
     else
       return "App-warm";
   };
+
+  const chooseUnits = units => {
+    console.log(units.target.value);
+    setUnits(!units)};
 
   return (
     <div className={chooseBack(weather)}>
@@ -97,7 +102,7 @@ function App() {
               <div className="weather">
                 {weather.weather[0].main}
               </div>
-            </div> 
+            </div>
           </div>
           </div>
           ) : ('')}
